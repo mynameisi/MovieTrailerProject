@@ -25,14 +25,14 @@ contained in the `MovieTrailerProject` folder are the following files:
 ## Running the program
 
 ### create the web-page with pre-existing movies
-A few movies are already put in file `movie_db.csv`. just by executing the following line of code, a movie web page runing on the default web browser on your computer would pop up with those movies.
+File `movie_db.csv` contains a few movies already. Just by executing the following line of code, a movie web page with those movies, runing on the default web browser on your computer would pop up.
 
 `python entertainment_center.py`
 
 ### input new movies
-The design of this project has MVC in mind. So the data layer of the webpage `movie_db.csv` is completely seperate with the control layer `entertainment_center.py` and the presentation layer `fresh_tomatoes.py`. 
+The design of this project has MVC in mind. The data layer of the webpage `movie_db.csv` is completely seperate with the control layer `entertainment_center.py` and the presentation layer `fresh_tomatoes.py`. 
 
-one advantage is that user don't have to modify any python code to change the movies. Simply open the data file `movie_db.csv` and add new lines to the file with required information of the movie and then run `python entertainment_center.py`, the web page would pop up with the list of newly inserted movies.
+one advantage of doing this is the user don't have to modify any python code to change the movies. Simply open the data file `movie_db.csv` and add new lines to the file with required information of the movie and then run `python entertainment_center.py`, the web page would pop up with the list of newly inserted movies.
 
 ## Built With
 
