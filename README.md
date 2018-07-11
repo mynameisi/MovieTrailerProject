@@ -6,72 +6,38 @@ This project contains server side python code that builds a static web page of M
 
 `python 2` or `python 3` is required for this project
 
-### Installing
+### Deployment
 
-
-
-```
-Give the example
-```
-
-And repeat
+clone the project from my GitHub repository
 
 ```
-until finished
+git clone https://github.com/mynameisi/MovieTrailerProject.git
 ```
+contained in the `MovieTrailerProject` folder are the following files:
+1. `entertainment_center.py` the main python file to run to create the webpage
+2. `fresh_tomatoes.py` helper code in charge of building the outlook of the webpage
+3. `media.py` contains the class definition of `Movie`
+4. `movie_db.csv` a comma seperated file with each line representing one movie. each line has 3 columns:
+   1. movie title
+   2. movie trailer url
+   3. movie poster url
 
-End with an example of getting some data out of the system or using it for a little demo
+## Running the program
 
-## Running the tests
+### create the web-page with pre-existing movies
+A few movies are already put in file `movie_db.csv`. just by executing the following line of code, a movie web page runing on the default web browser on your computer would pop up with those movies.
 
-Explain how to run the automated tests for this system
+`python entertainment_center.py`
 
-### Break down into end to end tests
+### input new movies
+The design of this project has MVC in mind. So the data layer of the webpage `movie_db.csv` is completely seperate with the control layer `entertainment_center.py` and the presentation layer `fresh_tomatoes.py`. 
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+one advantage is that user don't have to modify any python code to change the movies. Simply open the data file `movie_db.csv` and add new lines to the file with required information of the movie and then run `python entertainment_center.py`, the web page would pop up with the list of newly inserted movies.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* [Udacity Starter Code](https://github.com/udacity/ud036_StarterCode) - This is the starter project containing the `fresh_tomatoes.py` and a readme file.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
