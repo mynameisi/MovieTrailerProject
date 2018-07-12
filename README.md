@@ -3,13 +3,11 @@ This project contains server side python code that builds a static web page of M
 
 My realization of the project is based on a MVC structure.
 * Model : 
-	`movie_db.csv`
-	* this file contains only movie data, separated by comma, with each line corresponds to 1 movie. It's a table-like data-structure:
+	* `movie_db.csv`: this file contains only movie data, separated by comma, with each line corresponds to 1 movie. It's a table-like data-structure:
 		* 1st column: movie title
 		* 2nd column: movie trailer URL
 		* 3rd column: movie poster URL
-	`media.py`
-	* this file contains the design of Movie class
+	* `media.py`:this file contains the design of Movie class
 * View : `fresh_tomatoes.py`
 	* this file is provided by udacity, with the main goal of producing a webpage with data from `movie_db.csv`
 * Control : `entertainment_center.py`
