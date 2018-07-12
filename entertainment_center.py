@@ -11,7 +11,7 @@ from fresh_tomatoes import open_movies_page
 #                   1st column: movie title
 #                   2nd column: movie trailer URL
 #                   3rd column: movie poster URL
-#             the 1st line of the data is column title, so the following program needs to ommit it
+#             the 1st line of the data is column title, so the following program needs to omit it
 
 # View      : fresh_tomatoes.py
 #             this file is provided by udacity, with the main goal of producing a webpage with given data
@@ -28,12 +28,15 @@ movie_list=[]   # final movie list
 with open("movie_db.csv","r") as f: # reads the movie data file into f
     is_first_row=True
     for l in f:
-        if is_first_row: # this is to ommit the first row of the file which is not movie data but column names
+    	# omit the first row of the file which is not movie data but column names
+        if is_first_row: 
             is_first_row=False
             continue
+
+        # split each piece of information of 1 movie into a list: m
+        m=l.split(",") 
         
-        m=l.split(",") # split each piece of information of 1 movie into a list: m
-        
-        movie_list.append(Movie(title=m[0],trailer_url=m[1],poster_url=m[2])) # it looks clearer to write out the name of the parameters of the constructor of the Movie class
+        # it looks clearer to write out the name of the parameters of the constructor of the Movie class
+        movie_list.append(Movie(title=m[0],trailer_url=m[1],poster_url=m[2]))
 
 open_movies_page(movie_list)

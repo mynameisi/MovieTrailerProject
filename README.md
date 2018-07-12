@@ -1,6 +1,18 @@
 # Movie Trailer Website
 This project contains server side python code that builds a static web page of Movie Trailers. The produced web page would contain a box art image gallery of all movie posters, with the trailers of the movie bing played after each movie poster is clicked on. This is an assignment project from the UDacity Course [Programming Foundations with Python](https://classroom.udacity.com/courses/ud036).
 
+My realization of the project is based on a MVC structure.
+* Model : movie_db.csv
+	* this file contains only movie data, separated by comma, with each line corresponds to 1 movie
+* View : fresh_tomatoes.py
+	* this file is provided by udacity, with the main goal of producing a webpage with data from `movie_db.csv`
+* Control : entertainment_center.py
+	* this file contains the main control flow of the project:
+		1. loop through data file : movie_db.csv
+		2. with each line of the data, create a corresponding Movie object
+		3. append the object into the final movie list
+		4. call function: `open_movies_page` to produce and show the webpage using the list
+for detailed realization, please refer to the code themselves.
 
 ### Prerequisites
 
