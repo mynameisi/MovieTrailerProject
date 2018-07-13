@@ -25,18 +25,23 @@ from fresh_tomatoes import open_movies_page
 
 movie_list = []  # final movie list
 
-with open("movie_db.csv", "r") as f:  # reads the movie data file into f
+# reads the movie data file into movie_data_file
+with open("movie_db.csv", "r") as movie_data_file:
     is_first_row = True
-    for l in f:
+    for row in movie_data_file:
         # omit the first row of the file which is the movie column names
         if is_first_row:
             is_first_row = False
             continue
 
         # split each piece of information of 1 movie into a list: m
-        m = l.split(",")
+        movie = row.split(",")
 
         # it's clearer to write out the name of the parameters
-        movie_list.append(Movie(title=m[0], trailer_url=m[1], poster_url=m[2]))
+        movie_list.append(
+            Movie(
+                title=movie[0],
+                trailer_url=movie[1],
+                poster_url=movie[2]))
 
 open_movies_page(movie_list)
